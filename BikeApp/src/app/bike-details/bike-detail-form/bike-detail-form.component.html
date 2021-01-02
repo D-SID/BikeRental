@@ -1,0 +1,34 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <!--<input type="hidden" name="BikeId"
+    [value]="service.formData.Name"/>-->
+    <h5 style="margin: 0px 0px 20px -13px;">🤑Create new rent</h5>
+    <div id="borderaddnew" class="border rounded row"  >
+        <input type="hidden" name="BikeId" [value]="service.formData.bikeId"/>
+        <div class="form-group col">
+            <label>Bike Name</label>
+            <input id="textinput" type="text" class="form-control" placeholder="Name"
+            name="name" #Name="ngModel" [(ngModel)]="service.formData.name" 
+            required [class.invalid]="Name.invalid &&  Name.touched">
+        </div>
+        <div class="form-group col">
+            <label>Bike type</label>
+            <select id="textinput" type="text" required="true" class="form-control " placeholder="Type" selected="Type"
+                name="type" #Type="ngModel" [(ngModel)]="service.formData.type">
+                <option  >Custom</option>
+                <option>BMX</option>
+                <option>Road</option>
+                <option>Mountain</option>
+            </select>
+        </div>
+        <div class="form-group col">
+            <label>Rent Price</label>
+            <input type="text" class="form-control"  placeholder="Price"
+            name="price" #Price="ngModel" [(ngModel)]="service.formData.price" 
+            required [class.invalid]="Price.invalid && Price.touched">
+            
+        </div>
+        <div class="form-group col">
+            <button id="submitbutton" type="submit" class="btn btn-success btn-block" [disabled]="form.invalid">Submit rent</button>
+        </div>
+    </div>
+</form>

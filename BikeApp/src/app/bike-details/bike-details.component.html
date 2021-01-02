@@ -1,0 +1,27 @@
+<h3 style="margin: 25px 0px 25px -10px;;" class="font-weight-bold"> Awesome Bike Rental</h3>
+<app-bike-detail-form></app-bike-detail-form>
+<h4 style="margin: 35px 0px 25px -13px;">🤩You rent(Total: &#36;{{costRent()}})</h4>
+<div  *ngFor="let bd of service.list" >
+    <div id="borderlistrent" class="border rounded row" *ngIf="bd.avalible == false">
+        <div class="form-group col">
+            <h5 style="width: 655px;">{{bd.name}} / {{bd.type}} / &#36;{{bd.price}}</h5>
+        </div>
+        <div class="form-group col">
+            <button id="buttonCancel" type="submit" class="btn btn-danger" (click)="onUnRent(bd)">Cancel rent</button>
+        </div>
+    </div>
+</div>
+<h4 style="margin: 35px 0px 25px -13px;">🚲Available bicycles ({{countAvailableBike()}})</h4>
+<div *ngFor="let bd of service.list" >
+    <div id="borderlistrent" class="border rounded row" *ngIf="bd.avalible == true" >
+        <div class="form-group col">
+            <h5 style="width: 500px;">{{bd.name}} / {{bd.type}} / &#36;{{bd.price}}</h5>
+        </div>
+        <div class="form-group col">
+            <button id="buttonrent" type="info" class="btn btn-primary" (click)="onRent(bd)" >Rent</button>
+        </div>
+        <div class="form-group col">
+            <button id="buttondelete" type="submit" class="btn btn-danger" (click)="onDelete(bd.bikeId)">Delete</button>
+        </div>
+    </div>
+</div>

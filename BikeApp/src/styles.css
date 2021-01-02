@@ -1,0 +1,49 @@
+body{
+    background-color: #F5F5F5; /* Цвет фона веб-страницы */
+    color:#4D4D4D;
+   } 
+
+#borderaddnew{
+    background-color:#E9EAEE;
+    padding: 0px 0px 0px 0px;
+    height: 110px;
+    align-items:center;
+}
+#borderlistrent{
+    background-color:#FFFFFF;
+    margin: 20px -12px 0px -12px;
+    padding: 0px 0px 0px 0px;
+    height: 70px;
+    align-items:center;
+}
+#mainpage{
+    margin:0 auto;
+    height: 60vh;
+    width: 850px;
+    align-items:center;
+    
+}
+#buttonrent{
+    background-color:#3750C7;
+    width: 120px;
+    margin: 0px 0px 0px 50px;
+}
+#buttondelete{
+    
+    width: 120px;
+    margin: 0px 0px 0px 0px;
+}
+#buttonCancel{
+    width: 120px;
+    margin: 0px 0px 0px 40px;
+}
+#textinput{
+    width: 260px;
+}
+#submitbutton{
+    width: 120px ;
+    margin: 23px 0px 0px 0px;
+}
+input.invalid{
+    border-color: red;
+}
